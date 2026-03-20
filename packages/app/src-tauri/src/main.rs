@@ -11,8 +11,10 @@ use std::{
 use tauri::{
     menu::{MenuBuilder, MenuItemBuilder},
     tray::TrayIconBuilder,
-    ActivationPolicy, AppHandle, Runtime,
+    AppHandle, Runtime,
 };
+#[cfg(target_os = "macos")]
+use tauri::ActivationPolicy;
 
 const TRAY_ID: &str = "main-tray";
 const SCAN_INTERVAL_SECONDS: u64 = 2;

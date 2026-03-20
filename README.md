@@ -69,11 +69,13 @@ GitHub Actions workflow: `.github/workflows/ci.yml`
 
 ## PR-Only Flow and Branch Protection
 
-Recommended branch protection for `main`:
+Branch protection for `main` is enabled with:
 
 1. Require pull request before merge
 2. Require status checks to pass (`just test`)
 3. Disallow direct pushes/bypass for normal contributors
+
+Verified on 2026-03-20 via GitHub branch protection API.
 
 ## Greptile Review Bot
 
@@ -114,11 +116,11 @@ Policy:
 - Product spec driver: `specs/main.md`
 - Sprint plan: `.todo/sprint*/`
 
-## Branch Protection Verification Checklist
+## Branch Protection Maintenance Checklist
 
-After first CI run on `main`, maintainers should verify in GitHub settings:
+If branch rules are edited in GitHub settings, re-verify:
 
 1. PR required before merge to `main`.
 2. Required status check includes `just test`.
-3. Direct pushes to `main` are blocked for contributors.
-4. (Optional after validation) add Greptile check as required.
+3. Direct pushes to `main` remain blocked for contributors.
+4. (Optional) keep Greptile as advisory unless maintainers explicitly promote it.

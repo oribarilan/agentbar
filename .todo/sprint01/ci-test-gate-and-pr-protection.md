@@ -16,11 +16,11 @@ A reliable merge gate that prevents regressions and enforces the intended contri
 
 - [x] GitHub Actions workflow runs `just test` on pull requests targeting main branch.
 - [x] Workflow status check name is stable and documented.
-- [ ] Branch protection requires pull request before merge to main.
-- [ ] Branch protection requires the `just test` workflow check to pass.
-- [ ] Direct pushes to protected branch are disabled for regular contributors.
+- [x] Branch protection requires pull request before merge to main.
+- [x] Branch protection requires the `just test` workflow check to pass.
+- [x] Direct pushes to protected branch are disabled for regular contributors.
 
-> Note: last 3 items are repository settings in GitHub and require maintainer-side configuration/verification.
+> Verified via GitHub branch protection API on 2026-03-20.
 
 ## Test Plan / Success Verification
 
