@@ -1,0 +1,33 @@
+{
+  "name": "@agentbar/plugin",
+  "version": "0.1.0",
+  "private": true,
+  "description": "OpenCode plugin for Agentbar presence registration",
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": {
+      "import": "./src/index.ts",
+      "types": "./src/index.ts"
+    },
+    "./instance-record": {
+      "import": "./src/instance-record.ts",
+      "types": "./src/instance-record.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "tsc --noEmit",
+    "format": "prettier --check \"src/**/*.ts\" \"tests/**/*.ts\" \"README.md\" \"package.json\" \"tsconfig.json\" --ignore-path ../../.gitignore",
+    "format:fix": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\" \"README.md\" \"package.json\" \"tsconfig.json\" --ignore-path ../../.gitignore",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
+  }
+}

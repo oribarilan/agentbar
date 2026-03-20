@@ -1,0 +1,15 @@
+{
+  "statusCheck": true,
+  "strictness": 2,
+  "excludeAuthors": [
+    "dependabot[bot]",
+    "renovate[bot]"
+  ],
+  "includeBranches": [
+    "main"
+  ],
+  "commentTypes": [
+    "logic",
+    "syntax"
+  ]
+}

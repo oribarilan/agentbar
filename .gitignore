@@ -1,0 +1,23 @@
+node_modules/
+dist/
+.DS_Store
+.turbo/
+coverage/
+playwright-report/
+test-results/
+*.log
+
+# Rust / Tauri
+target/
+
+# Build artifacts
+packages/*/dist/
+packages/*/src-tauri/target/
+packages/*/src-tauri/gen/
+
+# Local task artifacts
+.playwright/
+.vitest/
+
+# Runtime state files used by local simulator/testing
+.agentbar-local/
