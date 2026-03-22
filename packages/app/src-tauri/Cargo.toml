@@ -2,6 +2,11 @@
 name = "agentbar"
 version = "0.1.0"
 edition = "2021"
+default-run = "agentbar"
+
+[lib]
+name = "agentbar_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
 
 [[bin]]
 name = "agentbar"
@@ -11,10 +16,13 @@ path = "src/main.rs"
 tauri-build = { version = "2", features = [] }
 
 [dependencies]
-tauri = { version = "2", features = ["tray-icon", "macos-private-api"] }
-tauri-plugin-shell = "2"
+tauri = { version = "2", features = ["tray-icon", "macos-private-api", "image-png"] }
+tauri-plugin-global-shortcut = "2"
+serde = { version = "1", features = ["derive"] }
 serde_json = "1"
-tokio = { version = "1", features = ["time"] }
+toml = "0.8"
+dirs = "6"
+thiserror = "2"
 
 [profile.release]
 strip = true

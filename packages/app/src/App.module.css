@@ -1,0 +1,38 @@
+.launcher {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(680px, 90%);
+  max-height: 65%;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--bg-primary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+
+  animation: fadeIn var(--transition-normal);
+}
+
+.emptyState {
+  min-height: 260px;
+  display: grid;
+  place-items: center;
+  color: var(--text-secondary);
+  font-size: var(--font-md);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+}

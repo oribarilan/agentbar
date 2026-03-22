@@ -1,9 +1,8 @@
 import { defineConfig } from "vite";
-import { svelte } from "@sveltejs/vite-plugin-svelte";
-import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  plugins: [svelte({ preprocess: vitePreprocess() })],
+  plugins: [react()],
   build: {
     outDir: "dist",
     emptyOutDir: true,
@@ -11,10 +10,5 @@ export default defineConfig({
   server: {
     port: 5173,
     strictPort: true,
-  },
-  test: {
-    environment: "node",
-    include: ["tests/**/*.test.ts"],
-    exclude: ["tests-ui/**"],
   },
 });
