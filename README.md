@@ -18,7 +18,13 @@ macOS menu bar companion for AI coding sessions (starting with OpenCode).
 pnpm install
 just test
 just check
+just dev
 ```
+
+`just dev` starts the local Tauri dev app (`@agentbar/app`) for interactive local development.
+It prefers the globally-installed Rust subcommand (`cargo-tauri`) when available,
+and falls back to `pnpm dlx @tauri-apps/cli` so it works without global install.
+If your dev server port is already used, stop the process on `5173` and run again.
 
 ## Simulator + UI Automation
 
