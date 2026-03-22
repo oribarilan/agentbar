@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-xs: 0.625rem;
+  --font-sm: 0.6875rem;
+  --font-base: 0.75rem;
+  --font-md: 0.8125rem;
+  --font-lg: 1rem;
+  --font-xl: 1.25rem;
+
+  --bg-primary: oklch(14% 0.006 60);
+  --bg-secondary: oklch(19% 0.007 60);
+  --bg-hover: oklch(23% 0.008 60);
+  --bg-selected: oklch(25% 0.01 60);
+  --bg-solid: oklch(14% 0.006 60);
+  --bg-accent-subtle: oklch(74% 0.15 65 / 0.1);
+
+  --text-primary: oklch(93% 0.006 60);
+  --text-secondary: oklch(62% 0.008 60);
+  --text-placeholder: oklch(43% 0.006 60);
+  --text-on-accent: oklch(16% 0.02 65);
+
+  --accent: oklch(74% 0.15 65);
+  --accent-hover: oklch(70% 0.14 65);
+
+  --border-subtle: oklch(23% 0.006 60);
+  --border-hover: oklch(28% 0.008 60);
+  --border-active: oklch(25% 0.007 60);
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 20px;
+  --space-2xl: 24px;
+  --space-3xl: 32px;
+
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  --shadow-lg: 0 25px 60px oklch(4% 0.01 60 / 0.5);
+
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-mono: "SF Mono", Menlo, Consolas, monospace;
+
+  --transition-fast: 120ms ease-out;
+  --transition-normal: 200ms ease-out;
+}
+
+html[data-font-size="extra-small"] {
+  --font-xs: 0.5625rem;
+  --font-sm: 0.625rem;
+  --font-base: 0.6875rem;
+  --font-md: 0.75rem;
+  --font-lg: 0.875rem;
+  --font-xl: 1.0625rem;
+}
+
+html[data-font-size="small"] {
+  --font-xs: 0.625rem;
+  --font-sm: 0.6875rem;
+  --font-base: 0.75rem;
+  --font-md: 0.8125rem;
+  --font-lg: 1rem;
+  --font-xl: 1.25rem;
+}
+
+html[data-font-size="medium"] {
+  --font-xs: 0.6875rem;
+  --font-sm: 0.75rem;
+  --font-base: 0.8125rem;
+  --font-md: 0.875rem;
+  --font-lg: 1.0625rem;
+  --font-xl: 1.3125rem;
+}
+
+html[data-font-size="large"] {
+  --font-xs: 0.75rem;
+  --font-sm: 0.8125rem;
+  --font-base: 0.875rem;
+  --font-md: 0.9375rem;
+  --font-lg: 1.125rem;
+  --font-xl: 1.375rem;
+}
+
+html,
+body {
+  background: transparent;
+  overflow: hidden;
+  font-family: var(--font-sans);
+  font-size: var(--font-base);
+  line-height: 1.5;
+  color: var(--text-primary);
+}
+
+#root {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+input,
+button,
+textarea {
+  font: inherit;
+  color: inherit;
+}

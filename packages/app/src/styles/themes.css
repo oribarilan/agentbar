@@ -1,0 +1,41 @@
+html[data-theme="agentbar"] {
+  --bg-primary: oklch(14% 0.006 60);
+  --bg-secondary: oklch(19% 0.007 60);
+  --bg-hover: oklch(23% 0.008 60);
+  --bg-selected: oklch(25% 0.01 60);
+  --bg-solid: oklch(14% 0.006 60);
+  --bg-accent-subtle: oklch(74% 0.15 65 / 0.1);
+
+  --text-primary: oklch(93% 0.006 60);
+  --text-secondary: oklch(62% 0.008 60);
+  --text-placeholder: oklch(43% 0.006 60);
+  --text-on-accent: oklch(16% 0.02 65);
+
+  --accent: oklch(74% 0.15 65);
+  --accent-hover: oklch(70% 0.14 65);
+
+  --border-subtle: oklch(23% 0.006 60);
+  --border-hover: oklch(28% 0.008 60);
+  --border-active: oklch(25% 0.007 60);
+}
+
+html[data-theme="agentbar-light"] {
+  --bg-primary: oklch(98% 0.005 65);
+  --bg-secondary: oklch(94% 0.008 65);
+  --bg-hover: oklch(91% 0.01 65);
+  --bg-selected: oklch(89% 0.012 65);
+  --bg-solid: oklch(98% 0.005 65);
+  --bg-accent-subtle: oklch(58% 0.15 60 / 0.08);
+
+  --text-primary: oklch(21% 0.01 60);
+  --text-secondary: oklch(47% 0.01 60);
+  --text-placeholder: oklch(63% 0.008 60);
+  --text-on-accent: oklch(98% 0.005 60);
+
+  --accent: oklch(58% 0.15 60);
+  --accent-hover: oklch(53% 0.14 60);
+
+  --border-subtle: oklch(88% 0.008 65);
+  --border-hover: oklch(82% 0.01 65);
+  --border-active: oklch(85% 0.009 65);
+}

@@ -1,0 +1,176 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.pageTitle {
+  font-size: var(--font-xl);
+  font-weight: 700;
+}
+
+.section {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl) var(--space-2xl);
+}
+
+.sectionTitle {
+  font-size: var(--font-base);
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-md);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+}
+
+.row + .row {
+  border-top: 1px solid var(--border-subtle);
+}
+
+.label {
+  font-size: var(--font-md);
+}
+
+.sublabel {
+  display: block;
+  font-size: var(--font-sm);
+  color: var(--text-placeholder);
+  margin-top: 2px;
+}
+
+.toggle {
+  position: relative;
+  width: 36px;
+  height: 20px;
+  border: none;
+  border-radius: 10px;
+  background: var(--border-hover);
+  cursor: pointer;
+  transition: background var(--transition-normal);
+}
+
+.toggle::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--text-on-accent);
+  transition: transform var(--transition-normal);
+}
+
+.toggleOn {
+  composes: toggle;
+  background: var(--accent);
+}
+
+.toggleOn::after {
+  transform: translateX(16px);
+}
+
+.segmentedControl {
+  display: flex;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.segmentedButton {
+  padding: var(--space-xs) var(--space-lg);
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: var(--font-base);
+  cursor: pointer;
+}
+
+.segmentedButton:not(:last-child) {
+  border-right: 1px solid var(--border-subtle);
+}
+
+.segmentedButtonActive {
+  composes: segmentedButton;
+  color: var(--text-on-accent);
+  background: var(--accent);
+}
+
+.resetRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding-top: var(--space-sm);
+}
+
+.resetConfirmText {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+}
+
+.buttonGhost {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: var(--font-sm);
+  padding: var(--space-xs) var(--space-md);
+  cursor: pointer;
+}
+
+.hotkeyCapsule {
+  display: inline-flex;
+  align-items: center;
+  min-width: 132px;
+  height: 30px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: var(--bg-primary);
+  overflow: hidden;
+}
+
+.hotkeyCapsuleRecording {
+  border-color: var(--accent);
+}
+
+.hotkeyBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: var(--font-sm);
+  padding: 0 var(--space-sm);
+  cursor: pointer;
+  font-family: var(--font-mono);
+}
+
+.hotkeyBtn:focus-visible {
+  outline: none;
+}
+
+.hotkeyValue {
+  color: var(--text-primary);
+  font-size: var(--font-sm);
+  font-family: var(--font-mono);
+  white-space: nowrap;
+}
+
+.hotkeyPlaceholder {
+  color: var(--text-placeholder);
+  font-size: var(--font-sm);
+  font-family: var(--font-mono);
+}

@@ -12,7 +12,22 @@
   "app": {
     "withGlobalTauri": false,
     "macOSPrivateApi": true,
-    "windows": [],
+    "windows": [
+      {
+        "label": "main",
+        "title": "",
+        "width": 680,
+        "height": 500,
+        "decorations": false,
+        "transparent": true,
+        "backgroundColor": "#00000000",
+        "alwaysOnTop": true,
+        "visible": false,
+        "resizable": false,
+        "skipTaskbar": true,
+        "center": true
+      }
+    ],
     "security": {
       "csp": null
     }
